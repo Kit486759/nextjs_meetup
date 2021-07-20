@@ -25,17 +25,35 @@ export default function HomePage(props) {
     return (
         <>
             {/* {state.length !== 0 && */}
-                <MeetupList meetups={props.meetups} />
+            <MeetupList meetups={props.meetups} />
             {/* } */}
         </>
 
     )
 }
 
+// // pre-render on server side (fetch/ run every request)
+// export async function getServerSideProps(context) {
+
+//     const req = context.req
+//     const res = context.res
+
+//     return {
+//         props: {
+//             meetups: DUMMY_MEETUPS
+//         },
+//         // fetch every ()second
+//         revalidate: 5
+//     }
+// }
+
+// pre-render on building(fetch/ run once)
 export async function getStaticProps(){
     return{
         props:{
             meetups : DUMMY_MEETUPS
-        }
+        },
+        // fetch every ()second
+        revalidate:5
     }
 }
