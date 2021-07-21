@@ -37,7 +37,7 @@ export default function HomePage(props) {
 // pre-render on building(fetch/ run once)
 export async function getStaticProps() {
 
-    const client = await MongoClient.connect(`mongodb+srv://kit:${process.env.MONGODB_USER_PW}@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
+    const client = await MongoClient.connect(`mongodb+srv://kit:xxivLr5EVmcPPjy@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
     const db = client.db();
     const meetupsCollection = db.collection('meetups');
 

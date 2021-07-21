@@ -18,7 +18,7 @@ export default function MeetupDetails(props) {
 
 export async function getStaticPaths() {
 
-    const client = await MongoClient.connect(`mongodb+srv://kit:${process.env.MONGODB_USER_PW}@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
+    const client = await MongoClient.connect(`mongodb+srv://kit:xxivLr5EVmcPPjy@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
     const db = client.db();
     const meetupsCollection = db.collection('meetups');
     const meetups = await meetupsCollection.find({}, { _id: 1 }).toArray()
@@ -54,7 +54,7 @@ export async function getStaticProps(context) {
     const meetupId = context.params.meetupId
     console.log(meetupId)
 
-    const client = await MongoClient.connect(`mongodb+srv://kit:${process.env.MONGODB_USER_PW}@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
+    const client = await MongoClient.connect(`mongodb+srv://kit:xxivLr5EVmcPPjy@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
     const db = client.db();
     const meetupsCollection = db.collection('meetups');
 

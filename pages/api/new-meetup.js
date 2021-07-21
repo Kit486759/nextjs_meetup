@@ -12,7 +12,7 @@ async function handler(req, res) {
 
         try {
 
-            const client = await MongoClient.connect(`mongodb+srv://kit:${process.env.MONGODB_USER_PW}@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
+            const client = await MongoClient.connect(`mongodb+srv://kit:xxivLr5EVmcPPjy@cluster0.ufguu.mongodb.net/meetups?retryWrites=true&w=majority`)
             const db = client.db();
 
             const meetupsCollection = db.collection('meetups');
