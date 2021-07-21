@@ -58,6 +58,6 @@ export async function getStaticProps() {
             })
         },
         // fetch every ()second
-        revalidate: 5,
+        revalidate: 1,
     }
 }
